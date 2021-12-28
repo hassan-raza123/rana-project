@@ -19,7 +19,7 @@
                       <div class="col-sm-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Date</label>
-                          <input type="digit" name="date" class="form-control datepicker valid_control">
+                          <input type="text" name="date" class="form-control datepicker valid_control">
                         </div>
                       </div>
                       <div class="col-sm-6">
