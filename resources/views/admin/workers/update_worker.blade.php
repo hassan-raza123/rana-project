@@ -39,7 +39,7 @@
                       <div class="col-sm-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Salary</label>
-                          <input type="text" name="salary" class="form-control valid_control" value="{{$update_worker->salary}}">
+                          <input type="text" name="salary" class="form-control valid_control" value="{{$update_worker->salary}}" onkeypress="return isNumber(event)">
                         </div>
                       </div>
                     </div>

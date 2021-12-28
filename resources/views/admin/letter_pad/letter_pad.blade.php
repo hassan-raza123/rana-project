@@ -18,7 +18,7 @@
                 </div>
                 <div class="row">
                   <div class="col-md-10">
-                  <h4 class="card-title">Workers Data</h4>
+                  <h4 class="card-title">Letter Pad Data</h4>
                   </div>
                   <div class="col-md-2">
                   <a href="{{route('add_pad_page')}}" class="btn btn-rose">Add Letter Pad</a>
@@ -35,6 +35,8 @@
                   <thead>
                     <tr>
                       <th>#</th>
+                      <th>Service</th>
+                      <th>Company</th>
                       <th>Date</th>
                       <th>Machine Number</th>
                       <th>Site</th>
@@ -48,6 +50,8 @@
                     @foreach($fetch_pad as $fetch_pad)
                         <tr>
                           <td width="50px">{{$fetch_pad->id}}</td>
+                          <td>{{$fetch_pad->service_name}}</td>
+                          <td>{{$fetch_pad->company_name}}</td>
                           <td>{{$fetch_pad->date}}</td>
                           <td>{{$fetch_pad->machine_number}}</td>
                           <td>{{$fetch_pad->site}}</td>

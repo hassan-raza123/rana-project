@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Service;
+use App\Models\Company;
 use App\Models\Pad;
 
 class PadController extends Controller
@@ -13,18 +15,22 @@ class PadController extends Controller
     }
 
     public function add_pad_page(){
-        return view('admin.letter_pad.add_padd');
+        $fetch_Service=Service::all();
+        $fetch_Company=Company::all();
+        return view('admin.letter_pad.add_padd',['fetch_Service'=>$fetch_Service,'fetch_Company'=>$fetch_Company]);
     }
     public function upload_pad(Request $request){
 
-        // $validation = $request->validate([
-        //     'name'=>'required|min:8|max:255',
-        //     'img'=>'required|image',
-        //     'discription'=>'required',
+        $validation = $request->validate([
+            'service_name'=>'required',
+            'company_name'=>'required',
+            'machine_number'=>'required|numeric',
 
-        // ]);
+        ]);
         $upload_pad=new Pad();
 
+        $upload_pad->service_name = $request->service_name;
+        $upload_pad->company_name = $request->company_name;
         $upload_pad->date = $request->date;
         $upload_pad->machine_number = $request->machine_number;
         $upload_pad->site = $request->site;
@@ -46,9 +52,10 @@ class PadController extends Controller
     public function update_pad($id){
 
         $update_pad=Pad::find($id);
+        $fetch_Service=Service::all();
+        $fetch_Company=Company::all();
 
-
-        return view('admin.letter_pad.update_pad',compact('update_pad'));
+        return view('admin.letter_pad.update_pad',compact('update_pad'),['fetch_Service'=>$fetch_Service,'fetch_Company'=>$fetch_Company]);
     }
     public function edit_pad(Request $request,$id){
 

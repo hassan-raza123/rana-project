@@ -25,7 +25,7 @@
                       <div class="col-sm-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Machine Number</label>
-                          <input type="text" name="machine_number" class="form-control valid_control">
+                          <input type="text" name="machine_number" class="form-control valid_control" onkeypress="return isNumber(event)">
                         </div>
                       </div>
                     </div>
@@ -39,7 +39,7 @@
                       <div class="col-sm-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Concrete Hours</label>
-                          <input type="text" name="concrete_hours" class="form-control timepicker valid_control">
+                          <input type="text" name="concrete_hours" class="form-control valid_control" onkeypress="return isNumber(event)">
                         </div>
                       </div>
                     </div>
@@ -47,7 +47,7 @@
                       <div class="col-sm-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Bill</label>
-                          <input type="text" name="bill"  class="form-control valid_control">
+                          <input type="text" name="bill"  class="form-control valid_control" onkeypress="return isNumber(event)">
                         </div>
                       </div>
                     </div>

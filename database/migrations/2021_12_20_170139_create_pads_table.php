@@ -15,6 +15,8 @@ class CreatePadsTable extends Migration
     {
         Schema::create('pads', function (Blueprint $table) {
             $table->id();
+            $table->string('service_name');
+            $table->string('company_name');
             $table->string('date');
             $table->string('machine_number');
             $table->string('site');
