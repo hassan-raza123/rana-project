@@ -19,7 +19,7 @@
                       <div class="col-sm-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Date</label>
-                          <input type="text" name="date" class="form-control datepicker valid_control">
+                          <input type="digit" name="date" class="form-control datepicker valid_control">
                         </div>
                       </div>
                       <div class="col-sm-6">
@@ -46,7 +46,7 @@
                     <div class="row">
                       <div class="col-sm-6">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Bill</label>
+                          <label class="bmd-label-floating">Amount</label>
                           <input type="text" name="bill"  class="form-control valid_control">
                         </div>
                       </div>
@@ -63,7 +63,7 @@
 </div>
 
 @endsection
- 
+
 
 
 @section('js')
