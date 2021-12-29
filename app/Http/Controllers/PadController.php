@@ -21,12 +21,6 @@ class PadController extends Controller
     }
     public function upload_pad(Request $request){
 
-        $validation = $request->validate([
-            'service_name'=>'required',
-            'company_name'=>'required',
-            'machine_number'=>'required|numeric',
-
-        ]);
         $upload_pad=new Pad();
 
         $upload_pad->service_name = $request->service_name;
@@ -61,12 +55,15 @@ class PadController extends Controller
 
         $update_pad=Pad::find($id);
 
+        $update_pad->service_name = $request->service_name;
+        $update_pad->company_name = $request->company_name;
         $update_pad->date = $request->date;
         $update_pad->machine_number = $request->machine_number;
         $update_pad->site = $request->site;
         $update_pad->concrete_quantity = $request->concrete_quantity;
         $update_pad->working_hours = $request->working_hours;
         $update_pad->bill = $request->bill;
+
 
 
     $update_pad->save();

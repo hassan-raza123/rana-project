@@ -8,6 +8,9 @@ function validateFormFields() {
             $(this)
             .closest("div")
             .append('<div class="my_danger_alert mb-2">This field is required</div>');
+            $(this)
+            .closest("select")
+            .append('<div class="my_danger_alert mb-2">This field is required</div>');
             valid = false;
         }
         else {
@@ -17,7 +20,7 @@ function validateFormFields() {
     if (!valid) {
         $("html, body").animate(
             {
-                scrollTop: $(".alert-danger:first").offset().top-80,
+                // scrollTop: $(".my_danger_alert:first").offset().top-80,
             },
             100
         );
@@ -35,6 +38,9 @@ function onClickSubmitButton($btn_class, $form_class)
         if(validateFormFields())
         {
             $($form_class).submit();
+        }else
+        {
+            console.log("Validation Error")
         }
         
     });
@@ -49,3 +55,6 @@ function isNumber(evt) {
     }
     return true;
 }
+
+
+

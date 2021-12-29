@@ -19,7 +19,8 @@
                         <div class="col-md-6">
                             <div class="form-group">
                               <!-- <label class="bmd-label-floating">Service</label> -->
-                              <select name="service_name" class=" selectpicker" data-style="select-with-transition" title="Choose Service" data-size="7">
+                              <select name="service_name" class=" selectpicker" data-style="select-with-transition" data-size="7">
+                              <option>None</option>
                                 @foreach($fetch_Service as $fetch_Service)
                                 <option>{{$fetch_Service->service_name}} </option>
                                 @endforeach
@@ -29,7 +30,8 @@
                         <div class="col-md-6">
                             <div class="form-group">
                               <!-- <label class="bmd-label-floating">Company</label> -->
-                              <select name="company_name" class=" selectpicker" data-style="select-with-transition" title="Choose Company" data-size="7">
+                              <select name="company_name" class=" selectpicker" data-style="select-with-transition" data-size="7">
+                              <option>None</option>
                                 @foreach($fetch_Company as $fetch_Company)
                                 <option>{{$fetch_Company->company_name}} </option>
                                 @endforeach

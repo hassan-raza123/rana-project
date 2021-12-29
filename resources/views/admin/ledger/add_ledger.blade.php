@@ -46,7 +46,7 @@
                     <div class="row">
                       <div class="col-sm-6">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Bill</label>
+                          <label class="bmd-label-floating">Amount</label>
                           <input type="text" name="bill"  class="form-control valid_control" onkeypress="return isNumber(event)">
                         </div>
                       </div>
